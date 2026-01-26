@@ -97,7 +97,7 @@ export default function About() {
       <Navbar />
 
       {/* 1. About Header */}
-      <section className="relative pt-52 pb-32 overflow-hidden min-h-[60vh] flex items-center">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden min-h-[40vh] md:min-h-[50vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050a15]/50 z-10" />
           <video 
@@ -128,7 +128,7 @@ export default function About() {
       </section>
 
       {/* 2. Company Overview */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-12 md:py-16 relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -187,7 +187,7 @@ export default function About() {
       </section>
 
       {/* 5. Why We Are Different? (Enhanced Layout) */}
-      <section className="py-32 bg-gradient-to-b from-[#050a15] via-[#0a1120] to-[#050a15] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-[#050a15] via-[#0a1120] to-[#050a15] relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-[120px] animate-pulse" />
@@ -195,27 +195,27 @@ export default function About() {
         </div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20"
+              className="inline-block px-4 py-1.5 mb-4 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20"
             >
               <span className="text-[#3b82f6] text-xs font-bold uppercase tracking-[0.2em]">Our Advantage</span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 uppercase tracking-tighter font-poppins">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 uppercase tracking-tighter font-poppins">
               Why We Are <span className="text-[#3b82f6]">Different?</span>
             </h2>
-            <p className="text-white/50 max-w-2xl mx-auto text-lg">
+            <p className="text-white/50 max-w-2xl mx-auto text-base md:text-lg px-4">
               We combine technical excellence with a deep commitment to our clients' long-term success.
             </p>
           </div>
           
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 lg:gap-8 items-center">
               {/* Left Column - 3 Cards */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 md:gap-6">
                 {[
                   { 
                     title: "Client-focused solution design", 
@@ -284,7 +284,7 @@ export default function About() {
               </motion.div>
 
               {/* Right Column - 3 Cards */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4 md:gap-6">
                 {[
                   { 
                     title: "Strong after-sales and AMC support", 
@@ -339,11 +339,11 @@ export default function About() {
       </section>
 
       {/* 4. Mission & Vision (Redesigned) */}
-      <section className="py-24 bg-[#050a15] relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-[#050a15] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 max-w-7xl mx-auto items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 lg:gap-8 max-w-7xl mx-auto items-center">
             {/* Left Side - 2 Cards */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               {/* Mission Card */}
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -409,7 +409,7 @@ export default function About() {
             </motion.div>
 
             {/* Right Side - 2 Cards */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               {/* Vision Card */}
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
@@ -460,9 +460,9 @@ export default function About() {
       </section>
 
       {/* 6. Trust & Credibility (Stats) */}
-      <section className="py-24 bg-[#0d1526]/50 border-y border-white/5">
+      <section className="py-12 md:py-16 bg-[#0d1526]/50 border-y border-white/5">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, i) => (
               <motion.div 
                 key={i}
@@ -472,10 +472,10 @@ export default function About() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto bg-[#3b82f6]/10 rounded-2xl flex items-center justify-center mb-6 border border-[#3b82f6]/20">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto bg-[#3b82f6]/10 rounded-2xl flex items-center justify-center mb-4 md:mb-6 border border-[#3b82f6]/20">
                   <stat.icon className="w-8 h-8 text-[#3b82f6]" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold mb-2 font-poppins tracking-tighter">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 font-poppins tracking-tighter">
                   <Counter value={stat.value} />
                 </div>
                 <div className="text-white/40 uppercase tracking-widest text-xs font-bold">{stat.label}</div>
@@ -486,7 +486,7 @@ export default function About() {
       </section>
 
           {/* Our Work Approach Section (Redesigned) */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#050a15] to-[#0d1526]">
+      <section className="py-12 md:py-16 relative overflow-hidden bg-gradient-to-b from-[#050a15] to-[#0d1526]">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
           <div className="absolute top-1/3 -left-20 w-80 h-80 bg-[#3b82f6]/10 rounded-full blur-[100px]" />
@@ -494,22 +494,22 @@ export default function About() {
         </div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-14">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 uppercase tracking-tight font-poppins">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase tracking-tight font-poppins">
                 Our Work <span className="text-[#3b82f6]">Approach</span>
               </h2>
-              <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto italic">
+              <p className="text-white/70 text-base md:text-lg lg:text-xl max-w-3xl mx-auto italic px-4">
                 Smart Planning. Seamless Execution. Reliable Support.
               </p>
             </motion.div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
             {/* Video Column (Left) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -533,7 +533,7 @@ export default function About() {
             </motion.div>
 
             {/* Content Column (Right) */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {approachItems.map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -572,18 +572,18 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-20 max-w-4xl mx-auto"
+            className="mt-10 md:mt-14 max-w-4xl mx-auto"
           >
-            <div className="relative bg-gradient-to-r from-[#3b82f6]/10 to-[#60a5fa]/10 rounded-2xl border border-[#3b82f6]/30 p-8 text-center">
+            <div className="relative bg-gradient-to-r from-[#3b82f6]/10 to-[#60a5fa]/10 rounded-2xl border border-[#3b82f6]/30 p-6 md:p-8 text-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-16 h-16 bg-[#050a15] rounded-full border-2 border-[#3b82f6] flex items-center justify-center shadow-lg shadow-[#3b82f6]/30">
-                  <Handshake className="w-8 h-8 text-[#3b82f6]" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#050a15] rounded-full border-2 border-[#3b82f6] flex items-center justify-center shadow-lg shadow-[#3b82f6]/30">
+                  <Handshake className="w-6 h-6 md:w-8 md:h-8 text-[#3b82f6]" />
                 </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-4 uppercase tracking-tight">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mt-4 mb-3 md:mb-4 uppercase tracking-tight">
                 Our <span className="text-[#3b82f6]">Commitment</span>
               </h3>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed">
+              <p className="text-white/70 text-sm md:text-base lg:text-lg leading-relaxed">
                 We believe in building long-term partnerships by delivering quality solutions, responsive support, and consistent performance. Every project is handled with accountability, professionalism, and attention to detail.
               </p>
             </div>
@@ -592,14 +592,14 @@ export default function About() {
       </section>
 
       {/* 8. Call to Action */}
-      <section className="py-16 bg-[#3b82f6] relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-[#3b82f6] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
-            <div className="text-left space-y-4">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-tighter leading-tight font-poppins">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-6xl mx-auto text-center md:text-left">
+            <div className="space-y-3 md:space-y-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white uppercase tracking-tighter leading-tight font-poppins">
                 Ready to Collaborate with us?
               </h2>
-              <p className="text-white/80 text-lg md:text-xl font-medium">
+              <p className="text-white/80 text-base md:text-lg lg:text-xl font-medium">
                 Let VIP Networks design the right solution for your business.
               </p>
             </div>
