@@ -1,7 +1,10 @@
 import { Link } from "wouter";
 import logo from "@assets/Untitled_design_1768974869981.png";
+import facebookIcon from "@assets/facebook_1769417989730.png";
+import whatsappIcon from "@assets/logo_1769417985585.png";
+import linkedinIcon from "@assets/linkedin_1769417993177.png";
+import instagramIcon from "@assets/instagram_1769417996612.png";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 
 export function Footer() {
@@ -24,21 +27,22 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { Icon: FaFacebookF, color: "bg-[#1877F2]", hoverColor: "hover:bg-[#1154aa]", href: "#" },
-    { Icon: FaWhatsapp, color: "bg-[#25D366]", hoverColor: "hover:bg-[#198f45]", href: "#" },
-    { Icon: FaLinkedinIn, color: "bg-[#0A66C2]", hoverColor: "hover:bg-[#074787]", href: "#" },
-    { Icon: FaInstagram, color: "bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]", hoverColor: "hover:brightness-75", href: "#" },
-    { Icon: FaTwitter, color: "bg-[#1DA1F2]", hoverColor: "hover:bg-[#1470a8]", href: "#" }
+    { icon: facebookIcon, alt: "Facebook", href: "#" },
+    { icon: whatsappIcon, alt: "WhatsApp", href: "#" },
+    { icon: linkedinIcon, alt: "LinkedIn", href: "#" },
+    { icon: instagramIcon, alt: "Instagram", href: "#" },
   ];
 
   return (
     <footer className="bg-[#050a15] border-t border-white/5 pt-20 pb-10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-16 items-start">
           {/* Brand */}
-          <div className="space-y-6 lg:col-span-4">
+          <div className="space-y-6 lg:col-span-3">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="VIP Networks" className="w-16 h-16 object-contain bg-white/5 rounded-full p-1" />
+              <div className="relative w-16 h-16 bg-white rounded-full flex items-center justify-center p-2 shadow-xl border-2 border-white/20">
+                <img src={logo} alt="VIP Networks" className="w-12 h-12 object-contain" />
+              </div>
               <div>
                 <h3 className="text-2xl font-bold text-white tracking-tight leading-none">VIP NETWORKS</h3>
                 <p className="text-[#3b82f6] text-[11px] tracking-[0.2em] uppercase mt-1 font-bold">Technology Meets Reliability</p>
@@ -48,13 +52,14 @@ export function Footer() {
               Leading provider of comprehensive IT infrastructure, security systems, and networking solutions for modern enterprises.
             </p>
             <div className="flex flex-wrap gap-3">
-              {socialLinks.map(({ Icon, color, hoverColor, href }, i) => (
+              {socialLinks.map(({ icon, alt, href }, i) => (
                 <a 
                   key={i} 
                   href={href} 
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 shadow-lg shadow-black/20 ${color} ${hoverColor}`}
+                  className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transition-all hover:scale-110 shadow-lg shadow-black/20"
+                  data-testid={`link-social-${alt.toLowerCase()}`}
                 >
-                  <Icon size={18} />
+                  <img src={icon} alt={alt} className="w-full h-full object-cover" />
                 </a>
               ))}
             </div>
@@ -124,7 +129,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter / Subscribe */}
-          <div className="lg:col-span-2 lg:ml-auto">
+          <div className="lg:col-span-3">
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Subscribe</h4>
             <p className="text-white/50 text-[15px] mb-6 leading-relaxed">
               Stay updated with our latest technology solutions and industry insights.
@@ -137,10 +142,12 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address" 
                   className={`w-full bg-white/5 border rounded-xl py-3 px-4 pr-12 text-sm text-white focus:outline-none transition-all ${error ? 'border-red-500' : 'border-white/10 focus:border-[#3b82f6]/50'}`}
+                  data-testid="input-email-subscribe"
                 />
                 <button 
                   onClick={handleSubscribe}
                   className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg bg-[#3b82f6] text-white flex items-center justify-center hover:bg-[#2563eb] transition-colors shadow-lg shadow-[#3b82f6]/20"
+                  data-testid="button-subscribe"
                 >
                   <Send size={14} />
                 </button>
@@ -151,11 +158,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[15px] text-white/40">
+        <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[15px] text-white/40">
           <p>© {new Date().getFullYear()} VIP Networks. All rights reserved.</p>
+          <p className="text-white/50">
+            Developed by{" "}
+            <a 
+              href="https://www.airavatatechnologies.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors font-medium"
+              data-testid="link-airavata"
+            >
+              Airavata Technologies
+            </a>
+          </p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">Terms of Service</a>
           </div>
         </div>
       </div>
