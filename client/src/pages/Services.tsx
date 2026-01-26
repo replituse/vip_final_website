@@ -61,7 +61,7 @@ export default function Services() {
       <Navbar />
       
       {/* Header */}
-      <div className="pt-52 pb-32 bg-secondary relative overflow-hidden min-h-[60vh] flex items-center">
+      <div className="pt-32 md:pt-52 pb-16 md:pb-32 bg-secondary relative overflow-hidden min-h-[50vh] md:min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <video 
@@ -74,16 +74,16 @@ export default function Services() {
           />
         </div>
         <div className="container px-4 md:px-6 mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white uppercase tracking-tighter">Our <span className="text-white">Services</span></h1>
-          <p className="text-white text-lg md:text-2xl font-medium max-w-3xl mx-auto drop-shadow-lg opacity-90">
+          <h1 className="text-3xl md:text-7xl font-bold mb-4 md:mb-6 text-white uppercase tracking-tighter">Our <span className="text-white">Services</span></h1>
+          <p className="text-base md:text-2xl font-medium max-w-3xl mx-auto drop-shadow-lg opacity-90">
             Comprehensive technology services tailored to secure, connect, and empower your enterprise.
           </p>
         </div>
       </div>
 
       {/* Services List */}
-      <div className="py-20 container px-4 md:px-6 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="py-16 md:py-20 container px-4 md:px-6 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} index={index} delay={index * 0.1} />
           ))}

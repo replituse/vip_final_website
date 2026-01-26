@@ -97,7 +97,7 @@ export default function About() {
       <Navbar />
 
       {/* 1. About Header */}
-      <section className="relative pt-52 pb-32 overflow-hidden min-h-[60vh] flex items-center">
+      <section className="relative pt-32 md:pt-52 pb-16 md:pb-32 overflow-hidden min-h-[50vh] md:min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050a15]/50 z-10" />
           <video 
@@ -117,10 +117,10 @@ export default function About() {
             transition={{ duration: 1 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="text-4xl md:text-7xl font-bold uppercase mb-6 text-white tracking-tighter">
+            <h1 className="text-3xl md:text-7xl font-bold uppercase mb-4 md:mb-6 text-white tracking-tighter">
               About <span className="text-white">VIP Networks</span>
             </h1>
-            <p className="text-white text-lg md:text-2xl max-w-3xl mx-auto font-medium drop-shadow-lg opacity-90">
+            <p className="text-base md:text-2xl max-w-3xl mx-auto font-medium drop-shadow-lg opacity-90">
               Empowering enterprises with cutting-edge infrastructure and security solutions designed for the future.
             </p>
           </motion.div>
@@ -131,36 +131,36 @@ export default function About() {
       <section className="py-12 md:py-16 relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="space-y-6 md:space-y-8"
               >
-                <div className="space-y-4">
-                  <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter leading-none">
+                <div className="space-y-3 md:space-y-4">
+                  <h2 className="text-2xl md:text-5xl font-bold uppercase tracking-tighter leading-tight">
                     Driving Innovation in <span className="text-[#3b82f6]">Infrastructure</span>
                   </h2>
                 </div>
 
-                <div className="space-y-6">
-                  <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light italic border-l-4 border-[#3b82f6]/30 pl-6">
+                <div className="space-y-4 md:space-y-6">
+                  <p className="text-lg md:text-2xl text-white/90 leading-relaxed font-light italic border-l-4 border-[#3b82f6]/30 pl-4 md:pl-6">
                     VIP Networks is a technology-driven IT and infrastructure solutions company delivering reliable, secure, and scalable systems for businesses across industries.
                   </p>
-                  <p className="text-lg text-white/70 leading-relaxed">
+                  <p className="text-sm md:text-lg text-white/70 leading-relaxed">
                     We specialize in networking, surveillance, security, automation, and digital transformation solutions designed to improve operational efficiency and safety. With a focus on innovation and performance, we help organizations build future-ready technology environments that support growth and continuity.
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <div className="bg-[#0d1526] border border-white/5 rounded-2xl px-6 py-4 flex items-center gap-3 shadow-xl">
-                    <CheckCircle2 className="w-5 h-5 text-[#3b82f6]" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-white/80">Reliable Systems</span>
+                <div className="flex flex-wrap gap-3 md:gap-4 pt-2 md:pt-4">
+                  <div className="bg-[#0d1526] border border-white/5 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 flex items-center gap-2 md:gap-3 shadow-xl">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-[#3b82f6]" />
+                    <span className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-white/80">Reliable Systems</span>
                   </div>
-                  <div className="bg-[#0d1526] border border-white/5 rounded-2xl px-6 py-4 flex items-center gap-3 shadow-xl">
-                    <CheckCircle2 className="w-5 h-5 text-[#3b82f6]" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-white/80">Scalable Solutions</span>
+                  <div className="bg-[#0d1526] border border-white/5 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 flex items-center gap-2 md:gap-3 shadow-xl">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-[#3b82f6]" />
+                    <span className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-white/80">Scalable Solutions</span>
                   </div>
                 </div>
               </motion.div>
@@ -170,7 +170,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 whileHover="hover"
-                className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group cursor-pointer max-w-sm mx-auto"
+                className="relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group cursor-pointer max-w-sm mx-auto w-full"
               >
                 <video 
                   autoPlay 
