@@ -61,7 +61,7 @@ export default function Services() {
       <Navbar />
       
       {/* Header */}
-      <div className="pt-32 pb-16 bg-secondary relative overflow-hidden">
+      <div className="pt-52 pb-32 bg-secondary relative overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <video 

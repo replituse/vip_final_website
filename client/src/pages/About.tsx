@@ -75,7 +75,7 @@ export default function About() {
       <Navbar />
 
       {/* 1. About Header */}
-      <section className="relative pt-40 pb-24 overflow-hidden min-h-[40vh] flex items-center">
+      <section className="relative pt-52 pb-32 overflow-hidden min-h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#050a15]/50 z-10" />
           <video 

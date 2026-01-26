@@ -63,7 +63,7 @@ export default function Contact() {
       <Navbar />
 
       {/* Header Section with Animated Background */}
-      <div className="pt-32 pb-20 bg-secondary relative overflow-hidden">
+      <div className="pt-52 pb-32 bg-secondary relative overflow-hidden min-h-[60vh] flex items-center">
         {/* Horizontal Full Heading Cover Animation */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/50 z-10" />
