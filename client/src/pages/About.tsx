@@ -8,6 +8,7 @@ import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 import networkingVideo from "@assets/From_KlickPin_CF_Pin_su_zenziads_1769407670142.mp4";
 import workApproachVideo from "@assets/From_KlickPin_CF_Pin_on_Application_design_1769408986210.mp4";
 import whyDifferentVideo from "@assets/From_KlickPin_CF_Pinterest___Decoraciones_fotograficas_Decorac_1769409733359.mp4";
+import hologramVideo from "@assets/From_KlickPin_CF_hologram___Black_wallpaper_iphone_dark_Graphi_1769410187226.mp4";
 import networkImg from "@assets/stock_images/technology_networkin_80809026.jpg";
 import teamImg from "@assets/stock_images/professional_team_wo_80221bd7.jpg";
 import datacenterImg from "@assets/stock_images/data_center_server_r_ac3b04d4.jpg";
@@ -348,49 +349,116 @@ export default function About() {
       {/* 4. Mission & Vision (Redesigned) */}
       <section className="py-24 bg-[#050a15] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Mission Card */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
-                  <Target className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 max-w-6xl mx-auto items-center">
+            {/* Left Side - 4 Cards in 2x2 Grid */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Mission Card */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <Target className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Mission</h2>
                 </div>
-                <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Mission</h2>
-              </div>
-              <p className="text-white/60 text-sm leading-relaxed font-medium">
-                To deliver dependable, innovative, and secure technology solutions that empower businesses to operate efficiently and confidently.
-              </p>
-              <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
-                01
-              </div>
-            </motion.div>
+                <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  To deliver dependable, innovative, and secure technology solutions that empower businesses to operate efficiently and confidently.
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
+                  01
+                </div>
+              </motion.div>
 
-            {/* Vision Card */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
+              {/* Vision Card */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <Lightbulb className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Vision</h2>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
+                  02
+                </div>
+              </motion.div>
+
+              {/* Values Card */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ y: -5 }}
+                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <Award className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Values</h2>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  Integrity, excellence, and commitment to delivering solutions that exceed expectations while building lasting partnerships.
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
+                  03
+                </div>
+              </motion.div>
+
+              {/* Promise Card */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ y: -5 }}
+                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <HeartHandshake className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Promise</h2>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  We promise unwavering support, transparent communication, and solutions that grow alongside your business needs.
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
+                  04
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Side - Portrait Video */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group mx-auto"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
-                  <Lightbulb className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
-                </div>
-                <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Vision</h2>
-              </div>
-              <p className="text-white/60 text-sm leading-relaxed font-medium">
-                To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
-              </p>
-              <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
-                02
-              </div>
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-64 md:w-72 aspect-[9/16] object-cover group-hover:scale-105 transition-transform duration-700"
+                src={hologramVideo}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent pointer-events-none" />
             </motion.div>
           </div>
         </div>
