@@ -261,97 +261,52 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. Mission & Vision */}
+      {/* 4. Mission & Vision (Redesigned) */}
       <section className="py-24 bg-[#050a15] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Mission Card */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              whileHover="hover"
-              className="relative pt-12 cursor-default"
+              whileHover={{ y: -5 }}
+              className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
             >
-              <motion.div 
-                variants={{
-                  hover: { scale: 1.08, translateY: 8 }
-                }}
-                className="absolute inset-0 top-20 bg-[#f59e0b] rounded-[2rem] transform scale-[1.05] translate-y-4 shadow-2xl transition-all duration-300" 
-              />
-              <motion.div 
-                variants={{
-                  hover: { translateY: 4 }
-                }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#d97706] px-8 py-2 rounded-t-xl text-white font-bold text-xl z-20 shadow-lg"
-              >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                  <Target className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                </div>
+                <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Mission</h2>
+              </div>
+              <p className="text-white/60 text-sm leading-relaxed font-medium">
+                To deliver dependable, innovative, and secure technology solutions that empower businesses to operate efficiently and confidently.
+              </p>
+              <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
                 01
-              </motion.div>
-              
-              <motion.div 
-                variants={{
-                  hover: { translateY: -10, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }
-                }}
-                className="relative bg-white rounded-3xl p-12 text-center shadow-xl z-10 min-h-[350px] flex flex-col items-center justify-center border border-white/20 transition-all duration-300"
-              >
-                <motion.div 
-                  variants={{
-                    hover: { scale: 1.1, rotate: [0, -5, 5, 0] }
-                  }}
-                  className="w-16 h-16 mb-6 flex items-center justify-center"
-                >
-                  <Target className="w-12 h-12 text-[#1f2937]" strokeWidth={2} />
-                </motion.div>
-                <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase tracking-widest text-[#1f2937] font-poppins">Mission</h2>
-                <p className="text-[#4b5563] text-sm md:text-base leading-relaxed font-semibold">
-                  To deliver dependable, innovative, and secure technology solutions that empower businesses to operate efficiently and confidently.
-                </p>
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* Vision Card */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              whileHover="hover"
-              className="relative pt-12 cursor-default"
+              whileHover={{ y: -5 }}
+              className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
             >
-              <motion.div 
-                variants={{
-                  hover: { scale: 1.08, translateY: 8 }
-                }}
-                className="absolute inset-0 top-20 bg-[#3b82f6] rounded-[2rem] transform scale-[1.05] translate-y-4 shadow-2xl transition-all duration-300" 
-              />
-              <motion.div 
-                variants={{
-                  hover: { translateY: 4 }
-                }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-[#2563eb] px-8 py-2 rounded-t-xl text-white font-bold text-xl z-20 shadow-lg"
-              >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                  <Lightbulb className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                </div>
+                <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Vision</h2>
+              </div>
+              <p className="text-white/60 text-sm leading-relaxed font-medium">
+                To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
+              </p>
+              <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
                 02
-              </motion.div>
-              
-              <motion.div 
-                variants={{
-                  hover: { translateY: -10, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }
-                }}
-                className="relative bg-white rounded-3xl p-12 text-center shadow-xl z-10 min-h-[350px] flex flex-col items-center justify-center border border-white/20 transition-all duration-300"
-              >
-                <motion.div 
-                  variants={{
-                    hover: { scale: 1.1, rotate: [0, 5, -5, 0] }
-                  }}
-                  className="w-16 h-16 mb-6 flex items-center justify-center"
-                >
-                  <Lightbulb className="w-12 h-12 text-[#1f2937]" strokeWidth={2} />
-                </motion.div>
-                <h2 className="text-2xl md:text-3xl font-black mb-6 uppercase tracking-widest text-[#1f2937] font-poppins">Vision</h2>
-                <p className="text-[#4b5563] text-sm md:text-base leading-relaxed font-semibold">
-                  To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
-                </p>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
