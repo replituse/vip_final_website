@@ -61,6 +61,15 @@ export default function About() {
     { label: "Client Relationships", value: "100%", icon: HeartHandshake },
   ];
 
+  const industries = [
+    { title: "Corporate Offices", icon: Briefcase, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" },
+    { title: "Manufacturing & Warehousing", icon: Network, image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" },
+    { title: "Retail & Commercial Spaces", icon: Rocket, image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" },
+    { title: "Education Institutions", icon: Lightbulb, image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" },
+    { title: "Healthcare Facilities", icon: HeartHandshake, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" },
+    { title: "Residential & Gated Communities", icon: UserCheck, image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" },
+  ];
+
   const workApproachVideo = "@assets/From_KlickPin_CF_Zoo°artz___Robot_picture_Robots_concept_Green_1769408366277.mp4";
 
   const approachItems = [
