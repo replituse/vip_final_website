@@ -5,7 +5,7 @@ import { Target, Award, CheckCircle2, Rocket, Network, ShieldAlert, Flame, Finge
 import { Link } from "wouter";
 import { useEffect, useState, useRef } from "react";
 import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
-import networkingVideo from "@assets/generated_videos/digital_networking_and_data_flow..mp4";
+import networkingVideo from "@assets/From_KlickPin_CF_Pin_su_zenziads_1769407670142.mp4";
 import networkImg from "@assets/stock_images/technology_networkin_80809026.jpg";
 import teamImg from "@assets/stock_images/professional_team_wo_80221bd7.jpg";
 import datacenterImg from "@assets/stock_images/data_center_server_r_ac3b04d4.jpg";
