@@ -61,13 +61,33 @@ export default function About() {
     { label: "Client Relationships", value: "100%", icon: HeartHandshake },
   ];
 
-  const industries = [
-    { title: "Corporate Offices", icon: Briefcase, image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" },
-    { title: "Manufacturing & Warehousing", icon: Network, image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" },
-    { title: "Retail & Commercial Spaces", icon: Rocket, image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" },
-    { title: "Education Institutions", icon: Lightbulb, image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" },
-    { title: "Healthcare Facilities", icon: HeartHandshake, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" },
-    { title: "Residential & Gated Communities", icon: UserCheck, image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" },
+  const workApproachVideo = "@assets/From_KlickPin_CF_Zoo°artz___Robot_picture_Robots_concept_Green_1769408366277.mp4";
+
+  const approachItems = [
+    {
+      step: "01",
+      title: "Requirement Analysis",
+      description: "We begin by understanding your business needs, operational challenges, and technical requirements to recommend the most suitable solution.",
+      icon: Search
+    },
+    {
+      step: "02",
+      title: "Site Survey & Assessment",
+      description: "Our technical team conducts a detailed site survey to evaluate infrastructure, layout, and network readiness for accurate planning.",
+      icon: MapPin
+    },
+    {
+      step: "03",
+      title: "Solution Design",
+      description: "We design a customized solution architecture using enterprise-grade technologies focusing on performance, security, and scalability.",
+      icon: PenTool
+    },
+    {
+      step: "04",
+      title: "Deployment & Support",
+      description: "Our engineers execute the deployment with precision, followed by reliable technical support and proactive maintenance.",
+      icon: Settings
+    }
   ];
 
   return (
@@ -338,7 +358,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Work Approach Section */}
+      {/* Our Work Approach Section (Redesigned) */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#050a15] to-[#0d1526]">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -347,7 +367,7 @@ export default function About() {
         </div>
 
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -356,85 +376,67 @@ export default function About() {
               <h2 className="text-3xl md:text-5xl font-bold mb-6 uppercase tracking-tight font-poppins">
                 Our Work <span className="text-[#3b82f6]">Approach</span>
               </h2>
-              <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto">
+              <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto italic">
                 Smart Planning. Seamless Execution. Reliable Support.
-              </p>
-              <p className="text-white/50 text-sm md:text-base max-w-3xl mx-auto mt-4">
-                At VIP Networks, we follow a structured and transparent work approach to ensure every project is delivered with precision, performance, and long-term reliability.
               </p>
             </motion.div>
           </div>
 
-          {/* Step-by-Step Approach Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Requirement Analysis & Consultation",
-                description: "We begin by understanding your business needs, operational challenges, and technical requirements. Our experts assess objectives, environment, and scalability needs to recommend the most suitable solution.",
-                icon: Search
-              },
-              {
-                step: "02",
-                title: "Site Survey & Technical Assessment",
-                description: "Our technical team conducts a detailed site survey to evaluate infrastructure, layout, network readiness, and environmental factors. This ensures accurate planning and smooth implementation.",
-                icon: MapPin
-              },
-              {
-                step: "03",
-                title: "Solution Design & Planning",
-                description: "Based on the assessment, we design a customized solution architecture using enterprise-grade technologies. Every design focuses on performance, security, scalability, and future expansion.",
-                icon: PenTool
-              },
-              {
-                step: "04",
-                title: "Deployment & Integration",
-                description: "Our certified engineers execute the installation and integration process with minimal disruption to your operations. All systems are configured, tested, and optimized for seamless performance.",
-                icon: Settings
-              },
-              {
-                step: "05",
-                title: "Testing, Validation & Handover",
-                description: "We perform rigorous testing to ensure system stability, security, and compliance with industry standards. Complete documentation and system walkthroughs are provided during handover.",
-                icon: TestTube
-              },
-              {
-                step: "06",
-                title: "Support, Maintenance & AMC",
-                description: "Post-deployment, we offer reliable technical support, proactive maintenance, and AMC services to ensure long-term system efficiency and uninterrupted operations.",
-                icon: Wrench
-              }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className="group relative bg-[#0d1526]/80 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:border-[#3b82f6]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
-              >
-                {/* Step Number Badge */}
-                <div className="absolute -top-3 -left-3 w-10 h-10 bg-[#3b82f6] rounded-xl flex items-center justify-center shadow-lg shadow-[#3b82f6]/30">
-                  <span className="text-white font-bold text-sm">{item.step}</span>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            {/* Video Column (Left) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group"
+            >
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
+                src={workApproachVideo}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent" />
+            </motion.div>
 
-                {/* Icon */}
-                <div className="mb-4 mt-2">
-                  <div className="w-14 h-14 rounded-xl bg-[#3b82f6]/10 border border-[#3b82f6]/20 flex items-center justify-center group-hover:bg-[#3b82f6]/20 transition-colors">
-                    <item.icon className="w-7 h-7 text-[#3b82f6]" />
+            {/* Content Column (Right) */}
+            <div className="space-y-6">
+              {approachItems.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.5 }}
+                  className="group relative bg-[#0d1526]/80 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:border-[#3b82f6]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] flex items-start gap-6"
+                >
+                  {/* Step Number Badge */}
+                  <div className="shrink-0 w-12 h-12 bg-[#3b82f6]/10 rounded-xl border border-[#3b82f6]/30 flex items-center justify-center group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <span className="text-[#3b82f6] group-hover:text-white font-bold text-lg">{item.step}</span>
                   </div>
-                </div>
 
-                {/* Content */}
-                <h3 className="text-lg font-bold mb-3 text-white group-hover:text-[#3b82f6] transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+                  {/* Content */}
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold text-white group-hover:text-[#3b82f6] transition-colors uppercase tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/60 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Hover Icon Reveal */}
+                  <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-10 transition-opacity">
+                    <item.icon className="w-12 h-12 text-[#3b82f6]" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
+        </div>
+      </section>
 
           {/* Our Commitment */}
           <motion.div
