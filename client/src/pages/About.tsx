@@ -116,12 +116,32 @@ export default function About() {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light italic">
-                  VIP Networks is a technology-driven IT and infrastructure solutions company delivering reliable, secure, and scalable systems for businesses across industries.
-                </p>
-                <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-                  We specialize in networking, surveillance, security, automation, and digital transformation solutions designed to improve operational efficiency and safety. With a focus on innovation and performance, we help organizations build future-ready technology environments that support growth and continuity.
-                </p>
+                <div className="space-y-4">
+                  <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter leading-none">
+                    Driving Innovation in <span className="text-[#3b82f6]">Infrastructure</span>
+                  </h2>
+                  <div className="w-20 h-1 bg-[#3b82f6] rounded-full" />
+                </div>
+
+                <div className="space-y-6">
+                  <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light italic border-l-4 border-[#3b82f6]/30 pl-6">
+                    VIP Networks is a technology-driven IT and infrastructure solutions company delivering reliable, secure, and scalable systems for businesses across industries.
+                  </p>
+                  <p className="text-lg text-white/70 leading-relaxed">
+                    We specialize in networking, surveillance, security, automation, and digital transformation solutions designed to improve operational efficiency and safety. With a focus on innovation and performance, we help organizations build future-ready technology environments that support growth and continuity.
+                  </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-4 pt-4">
+                  <div className="bg-[#0d1526] border border-white/5 rounded-2xl px-6 py-4 flex items-center gap-3 shadow-xl">
+                    <CheckCircle2 className="w-5 h-5 text-[#3b82f6]" />
+                    <span className="text-sm font-bold uppercase tracking-widest text-white/80">Reliable Systems</span>
+                  </div>
+                  <div className="bg-[#0d1526] border border-white/5 rounded-2xl px-6 py-4 flex items-center gap-3 shadow-xl">
+                    <CheckCircle2 className="w-5 h-5 text-[#3b82f6]" />
+                    <span className="text-sm font-bold uppercase tracking-widest text-white/80">Scalable Solutions</span>
+                  </div>
+                </div>
               </motion.div>
               
               <motion.div
