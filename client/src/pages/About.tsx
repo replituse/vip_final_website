@@ -349,9 +349,9 @@ export default function About() {
       {/* 4. Mission & Vision (Redesigned) */}
       <section className="py-24 bg-[#050a15] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid lg:grid-cols-[1fr_auto] gap-12 max-w-6xl mx-auto items-center">
-            {/* Left Side - 4 Cards in 2x2 Grid */}
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 max-w-7xl mx-auto items-center">
+            {/* Left Side - 2 Cards */}
+            <div className="flex flex-col gap-6">
               {/* Mission Card */}
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
@@ -371,28 +371,6 @@ export default function About() {
                 </p>
                 <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
                   01
-                </div>
-              </motion.div>
-
-              {/* Vision Card */}
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
-                    <Lightbulb className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
-                  </div>
-                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Vision</h2>
-                </div>
-                <p className="text-white/60 text-sm leading-relaxed font-medium">
-                  To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
-                </p>
-                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
-                  02
                 </div>
               </motion.div>
 
@@ -416,6 +394,49 @@ export default function About() {
                 </p>
                 <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
                   03
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Middle Side - Portrait Video */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group mx-auto order-last lg:order-none"
+            >
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-64 md:w-72 aspect-[9/16] object-cover group-hover:scale-105 transition-transform duration-700"
+                src={hologramVideo}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent pointer-events-none" />
+            </motion.div>
+
+            {/* Right Side - 2 Cards */}
+            <div className="flex flex-col gap-6">
+              {/* Vision Card */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group relative p-8 rounded-3xl bg-[#0d1526] border border-white/5 shadow-2xl transition-all hover:border-[#3b82f6]/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] transition-all duration-300">
+                    <Lightbulb className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-widest text-white group-hover:text-[#3b82f6] transition-colors">Vision</h2>
+                </div>
+                <p className="text-white/60 text-sm leading-relaxed font-medium">
+                  To be a trusted technology partner recognized for quality, innovation, and long-term customer relationships.
+                </p>
+                <div className="absolute top-4 right-4 text-xs font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors uppercase">
+                  02
                 </div>
               </motion.div>
 
@@ -442,24 +463,6 @@ export default function About() {
                 </div>
               </motion.div>
             </div>
-
-            {/* Right Side - Portrait Video */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group mx-auto"
-            >
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="w-64 md:w-72 aspect-[9/16] object-cover group-hover:scale-105 transition-transform duration-700"
-                src={hologramVideo}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent pointer-events-none" />
-            </motion.div>
           </div>
         </div>
       </section>
