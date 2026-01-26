@@ -7,7 +7,7 @@ import { useSubmitContact } from "@/hooks/use-contact";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, Loader2, Instagram, Facebook, Linkedin, Twitter, MessageSquare } from "lucide-react";
 import { z } from "zod";
-import worldMapVideo from "@assets/Globalization_World_Map_Animation_HD_Blue_1080p_1768979832612.mp4";
+import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 import radarGif from "@assets/CCTV_Camera_1768636156008.gif";
 
 // Frontend validation schema

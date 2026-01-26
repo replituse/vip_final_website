@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Users, ShieldCheck, Cpu, Headphones, Trophy } from "lucide-react";
 import { services } from "@/lib/services-data";
 import { ServiceCard } from "@/components/ServiceCard";
-import worldMapVideo from "@assets/Globalization_World_Map_Animation_HD_Blue_1080p_1768979832612.mp4";
+import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 
 // Why Choose Images
 import experiencedTechImg from "@assets/pexels-cottonbro-6804071_1768889922723.jpg";
