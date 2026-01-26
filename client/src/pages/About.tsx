@@ -358,7 +358,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Work Approach Section (Redesigned) */}
+          {/* Our Work Approach Section (Redesigned) */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#050a15] to-[#0d1526]">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -435,15 +435,13 @@ export default function About() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
           {/* Our Commitment */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 max-w-4xl mx-auto"
+            className="mt-20 max-w-4xl mx-auto"
           >
             <div className="relative bg-gradient-to-r from-[#3b82f6]/10 to-[#60a5fa]/10 rounded-2xl border border-[#3b82f6]/30 p-8 text-center">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
