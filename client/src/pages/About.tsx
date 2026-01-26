@@ -164,139 +164,98 @@ export default function About() {
         </div>
       </section>
 
-      {/* 5. Why We Are Different (Roadmap Layout) */}
-      <section className="py-24 bg-gradient-to-b from-[#050a15] to-[#0d1526] relative overflow-hidden">
+      {/* 5. Why We Are Different? (Enhanced Layout) */}
+      <section className="py-32 bg-gradient-to-b from-[#050a15] via-[#0a1120] to-[#050a15] relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-[#3b82f6]/5 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tight font-poppins">Why We Are <span className="text-[#3b82f6]">Different</span></h2>
+          <div className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#3b82f6]/10 border border-[#3b82f6]/20"
+            >
+              <span className="text-[#3b82f6] text-xs font-bold uppercase tracking-[0.2em]">Our Advantage</span>
+            </motion.div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 uppercase tracking-tighter font-poppins">
+              Why We Are <span className="text-[#3b82f6]">Different?</span>
+            </h2>
+            <p className="text-white/50 max-w-2xl mx-auto text-lg">
+              We combine technical excellence with a deep commitment to our clients' long-term success.
+            </p>
           </div>
           
-          {/* Mobile Layout */}
-          <div className="md:hidden relative py-8 px-4">
-            {/* Mobile Vertical Roadmap Line (Left Aligned) */}
-            <div className="absolute left-8 top-0 h-full w-1 bg-white/5 overflow-hidden">
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-b from-transparent via-[#3b82f6] to-transparent"
-                animate={{ y: ['-100%', '100%'] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              />
-            </div>
-
-            <div className="flex flex-col gap-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { text: "Client-focused solution design", step: "01" },
-                { text: "Enterprise-grade technologies", step: "02" },
-                { text: "Skilled and certified professionals", step: "03" },
-                { text: "Strong after-sales and AMC support", step: "04" },
-                { text: "Commitment to reliability and performance", step: "05" }
+                { 
+                  title: "Client-focused solution design", 
+                  desc: "We don't believe in one-size-fits-all. Every solution is tailored to your specific operational needs.",
+                  icon: UserCheck, 
+                  step: "01" 
+                },
+                { 
+                  title: "Enterprise-grade technologies", 
+                  desc: "We partner with global leaders to bring you the most reliable and advanced hardware and software.",
+                  icon: ShieldAlert, 
+                  step: "02" 
+                },
+                { 
+                  title: "Skilled and certified professionals", 
+                  desc: "Our team undergoes rigorous training and certification to ensure flawless implementation.",
+                  icon: Award, 
+                  step: "03" 
+                },
+                { 
+                  title: "Strong after-sales and AMC support", 
+                  desc: "Our relationship doesn't end at deployment. We provide 24/7 support and proactive maintenance.",
+                  icon: HeartHandshake, 
+                  step: "04" 
+                },
+                { 
+                  title: "Commitment to reliability and performance", 
+                  desc: "Every system we build is stress-tested to guarantee maximum uptime and peak performance.",
+                  icon: Target, 
+                  step: "05" 
+                },
+                { 
+                  title: "Future-Ready Infrastructure", 
+                  desc: "We design systems that grow with your business, ensuring your investment is protected for years.",
+                  icon: Rocket, 
+                  step: "06" 
+                }
               ].map((point, idx) => (
-                <div key={idx} className="relative flex flex-row items-center">
-                  {/* Step Indicator */}
-                  <div className="relative z-30 flex items-center justify-center shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-[#050a15] border-2 border-[#3b82f6] flex flex-col items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                      <span className="text-[8px] font-black text-[#3b82f6] leading-none">STEP</span>
-                      <span className="text-xs font-bold text-white leading-none">{point.step}</span>
-                    </div>
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  className="group relative bg-[#0d1526]/50 backdrop-blur-sm p-8 rounded-[2.5rem] border border-white/5 shadow-2xl hover:border-[#3b82f6]/30 transition-all"
+                >
+                  <div className="absolute top-8 right-8 text-4xl font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
+                    {point.step}
                   </div>
-
-                  {/* Content Card */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="relative z-20 ml-6 max-w-[280px] bg-[#0d1526]/80 backdrop-blur-sm p-5 rounded-2xl border border-white/5 shadow-xl hover:border-[#3b82f6]/40 transition-all group"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#3b82f6]/10 flex items-center justify-center shrink-0 border border-[#3b82f6]/20">
-                        <CheckCircle2 className="w-5 h-5 text-[#3b82f6]" />
-                      </div>
-                      <h3 className="text-sm font-bold leading-tight group-hover:text-[#3b82f6] transition-colors">{point.text}</h3>
-                    </div>
-                  </motion.div>
-                </div>
+                  <div className="w-14 h-14 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center mb-6 border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] group-hover:scale-110 transition-all duration-300">
+                    <point.icon className="w-7 h-7 text-[#3b82f6] group-hover:text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#3b82f6] transition-colors uppercase tracking-tight leading-tight">
+                    {point.title}
+                  </h3>
+                  <p className="text-white/50 text-sm leading-relaxed group-hover:text-white/70 transition-colors">
+                    {point.desc}
+                  </p>
+                  <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <CheckCircle2 className="w-6 h-6 text-[#3b82f6]" />
+                  </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
-
-          {/* Desktop Layout */}
-          <div className="hidden md:block relative py-20 px-4">
-            {/* Desktop Horizontal Roadmap Line - positioned at center */}
-            <div className="absolute top-1/2 left-0 w-full h-1 bg-white/5 -translate-y-1/2 overflow-hidden">
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-[#3b82f6] to-transparent"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              />
-            </div>
-
-            <div className="grid grid-cols-5 gap-4 relative">
-              {[
-                { text: "Client-focused solution design", step: "01" },
-                { text: "Enterprise-grade technologies", step: "02" },
-                { text: "Skilled and certified professionals", step: "03" },
-                { text: "Strong after-sales and AMC support", step: "04" },
-                { text: "Commitment to reliability and performance", step: "05" }
-              ].map((point, idx) => {
-                const isTop = idx % 2 === 0;
-                return (
-                  <div key={idx} className="relative flex flex-col items-center h-[320px]">
-                    {/* Top Card Area */}
-                    <div className={`flex-1 flex items-end justify-center pb-4 ${isTop ? '' : 'invisible'}`}>
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: idx * 0.1 }}
-                        className="relative z-20 w-full max-w-[200px] bg-[#0d1526]/80 backdrop-blur-sm p-4 rounded-2xl border border-white/5 shadow-xl hover:border-[#3b82f6]/40 transition-all group"
-                      >
-                        <div className="flex items-start gap-2">
-                          <div className="w-7 h-7 rounded-lg bg-[#3b82f6]/10 flex items-center justify-center shrink-0 border border-[#3b82f6]/20">
-                            <CheckCircle2 className="w-4 h-4 text-[#3b82f6]" />
-                          </div>
-                          <h3 className="text-xs font-bold leading-tight group-hover:text-[#3b82f6] transition-colors uppercase">{point.text}</h3>
-                        </div>
-                      </motion.div>
-                    </div>
-
-                    {/* Connector Line Top */}
-                    {isTop && (
-                      <div className="w-0.5 h-6 bg-gradient-to-b from-[#3b82f6]/50 to-[#3b82f6]" />
-                    )}
-
-                    {/* Step Indicator - at center line */}
-                    <div className="relative z-30 flex items-center justify-center shrink-0">
-                      <div className="w-14 h-14 rounded-full bg-[#050a15] border-2 border-[#3b82f6] flex flex-col items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-                        <span className="text-[8px] font-black text-[#3b82f6] leading-none">STEP</span>
-                        <span className="text-sm font-bold text-white leading-none">{point.step}</span>
-                      </div>
-                    </div>
-
-                    {/* Connector Line Bottom */}
-                    {!isTop && (
-                      <div className="w-0.5 h-6 bg-gradient-to-t from-[#3b82f6]/50 to-[#3b82f6]" />
-                    )}
-
-                    {/* Bottom Card Area */}
-                    <div className={`flex-1 flex items-start justify-center pt-4 ${!isTop ? '' : 'invisible'}`}>
-                      <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: idx * 0.1 }}
-                        className="relative z-20 w-full max-w-[200px] bg-[#0d1526]/80 backdrop-blur-sm p-4 rounded-2xl border border-white/5 shadow-xl hover:border-[#3b82f6]/40 transition-all group"
-                      >
-                        <div className="flex items-start gap-2">
-                          <div className="w-7 h-7 rounded-lg bg-[#3b82f6]/10 flex items-center justify-center shrink-0 border border-[#3b82f6]/20">
-                            <CheckCircle2 className="w-4 h-4 text-[#3b82f6]" />
-                          </div>
-                          <h3 className="text-xs font-bold leading-tight group-hover:text-[#3b82f6] transition-colors uppercase">{point.text}</h3>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
           </div>
         </div>
