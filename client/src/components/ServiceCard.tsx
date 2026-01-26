@@ -28,13 +28,13 @@ export function ServiceCard({ title, description, image, delay = 0, showDescript
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1120] via-transparent to-transparent opacity-30" />
           </div>
           
-          <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-base md:text-lg font-bold text-white group-hover:text-primary transition-colors uppercase tracking-wider leading-tight mb-4 min-h-[3rem] flex items-center">
+          <div className="p-4 md:p-6 flex flex-col flex-1">
+            <h3 className="text-sm md:text-lg font-bold text-white group-hover:text-primary transition-colors uppercase tracking-wider leading-tight mb-2 md:mb-4 min-h-[2.5rem] md:min-h-[3rem] flex items-center">
               {title}
             </h3>
             
             {showDescription && (
-              <p className="text-sm text-muted-foreground mb-6 line-clamp-2 leading-relaxed">
+              <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6 line-clamp-2 leading-relaxed">
                 {description}
               </p>
             )}

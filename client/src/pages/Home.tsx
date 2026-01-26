@@ -69,20 +69,20 @@ export default function Home() {
 
         <div className="container relative z-20 px-4 md:px-6 text-center">
           <div className="flex flex-col items-center">
-            <div className="relative w-40 h-40 md:w-56 md:h-56 mb-8 bg-white rounded-full flex items-center justify-center p-2 shadow-2xl border-4 border-white/20">
+            <div className="relative w-32 h-32 md:w-56 md:h-56 mb-6 md:mb-8 bg-white rounded-full flex items-center justify-center p-2 shadow-2xl border-4 border-white/20">
               <img 
                 src={logo} 
                 alt="VIP Networks" 
                 className="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(0,0,0,0.1)]" 
               />
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white uppercase tracking-tight relative z-10">
-              Where Technology Meets <br />
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight text-white uppercase tracking-tight relative z-10">
+              Where Technology Meets <br className="hidden md:block" />
               <span className="text-white">
                 Reliability
               </span>
             </h1>
-            <div className="max-w-2xl mx-auto text-base md:text-xl text-white/90 mb-10 leading-relaxed drop-shadow-lg h-[3em]">
+            <div className="max-w-2xl mx-auto text-sm md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed drop-shadow-lg min-h-[4em] md:h-[3em]">
               <Typewriter
                 options={{
                   strings: ["Empowering your business with cutting-edge security, networking, and IT infrastructure solutions tailored for the modern enterprise."],
@@ -94,14 +94,14 @@ export default function Home() {
               />
             </div>
             
-            <div className="flex flex-row gap-3 md:gap-4 justify-center w-full max-w-[600px] px-2">
-              <Link href="/services" className="flex-1">
-                <button className="w-full px-4 md:px-8 py-4 md:py-3 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all uppercase text-xs md:text-lg tracking-wider flex items-center justify-center cursor-pointer no-default-hover-elevate no-default-active-elevate whitespace-nowrap">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center w-full max-w-[500px] px-4">
+              <Link href="/services" className="w-full">
+                <button className="w-full px-6 py-3.5 md:py-3 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all uppercase text-sm md:text-lg tracking-wider flex items-center justify-center cursor-pointer no-default-hover-elevate no-default-active-elevate whitespace-nowrap">
                   Explore Solutions
                 </button>
               </Link>
-              <Link href="/contact" className="flex-1">
-                <button className="w-full px-4 md:px-8 py-4 md:py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-all uppercase text-xs md:text-lg tracking-wider flex items-center justify-center cursor-pointer backdrop-blur-sm no-default-hover-elevate no-default-active-elevate whitespace-nowrap">
+              <Link href="/contact" className="w-full">
+                <button className="w-full px-6 py-3.5 md:py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-all uppercase text-sm md:text-lg tracking-wider flex items-center justify-center cursor-pointer backdrop-blur-sm no-default-hover-elevate no-default-active-elevate whitespace-nowrap">
                   Contact Us
                 </button>
               </Link>
@@ -111,9 +111,9 @@ export default function Home() {
       </section>
 
       {/* INTRO / ABOUT PREVIEW */}
-      <section className="py-24 bg-[#050a15] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#050a15] relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="flex flex-col items-center text-center mb-16">
+          <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -121,22 +121,22 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="w-full"
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 font-poppins text-white leading-tight uppercase tracking-tighter lg:whitespace-nowrap">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-6 md:mb-8 font-poppins text-white leading-tight uppercase tracking-tighter lg:whitespace-nowrap">
                 Redefining Security & <span className="text-[#3b82f6]">Connectivity</span>
               </h2>
-              <p className="text-white mb-12 text-lg md:text-xl max-w-6xl mx-auto leading-relaxed px-8 md:px-32">
+              <p className="text-white mb-10 md:mb-12 text-base md:text-xl max-w-6xl mx-auto leading-relaxed px-4 md:px-32">
                 VIP Networks specializes in delivering top-tier IT infrastructure and security solutions. From enterprise networking to advanced surveillance, we build systems that safeguard your assets and streamline your operations.
               </p>
               
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 mb-16">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 mb-12 md:mb-16">
                 {[
                   { text: "Expert installation & maintenance", icon: Shield },
                   { text: "24/7 Technical Support", icon: Headset },
                   { text: "Customized Enterprise Solutions", icon: Lock }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-white/90 font-bold uppercase tracking-widest text-xs md:text-sm">
-                    <div className="w-12 h-12 rounded-full bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-                      <item.icon className="w-6 h-6 text-[#3b82f6]" />
+                  <div key={i} className="flex items-center gap-4 text-white/90 font-bold uppercase tracking-widest text-[10px] md:text-sm text-left md:text-center w-full md:w-auto px-4 md:px-0">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] shrink-0">
+                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-[#3b82f6]" />
                     </div>
                     <span>{item.text}</span>
                   </div>
@@ -145,7 +145,7 @@ export default function Home() {
 
               <div className="relative w-full">
                 <div className="absolute -inset-20 bg-[#3b82f6]/5 blur-[120px] rounded-full pointer-events-none" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                   {[
                     { title: "Security", img: generatedSecurity, desc: "Comprehensive protection for physical and digital assets." },
                     { title: "Network", img: generatedNetwork, desc: "High-speed infrastructure for modern business." },
@@ -229,16 +229,16 @@ export default function Home() {
       </section>
 
       {/* INDUSTRIES SECTION */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white font-poppins tracking-tight uppercase">Industries <span className="text-[#3b82f6]">We Serve</span></h2>
-            <p className="text-white text-lg md:text-xl whitespace-nowrap">
+          <div className="text-center max-w-5xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white font-poppins tracking-tight uppercase">Industries <span className="text-[#3b82f6]">We Serve</span></h2>
+            <p className="text-white text-base md:text-xl">
               Tailored technology solutions for diverse sectors, driving innovation and security across industries.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { title: "Smart Cities", img: indSmartCity, desc: "Urban infrastructure with integrated IoT and security." },
               { title: "Manufacturing", img: indManufacturing, desc: "Industrial automation and robust network connectivity." },
@@ -271,14 +271,14 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section className="py-24 bg-secondary/10 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-secondary/10 relative overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white font-poppins tracking-tight uppercase">Completed <span className="text-[#3b82f6]">Projects</span></h2>
-            <p className="text-white text-lg">A showcase of our successfully delivered infrastructure and security solutions.</p>
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white font-poppins tracking-tight uppercase">Completed <span className="text-[#3b82f6]">Projects</span></h2>
+            <p className="text-white text-base md:text-lg">A showcase of our successfully delivered infrastructure and security solutions.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { title: "Enterprise Networking", img: projectNetwork, location: "Corporate Plaza" },
               { title: "Smart Hotel AV", img: projectAV, location: "Grand Regency" },
@@ -337,18 +337,18 @@ export default function Home() {
                 {[...testimonials, ...testimonials].map((testimonial, idx) => (
                   <div
                     key={idx}
-                    className="inline-block w-[350px] md:w-[450px] bg-[#0d1526]/80 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-white/5 shadow-2xl relative group/card transition-all duration-500 hover:border-[#3b82f6]/30 hover:shadow-[#3b82f6]/10"
+                    className="inline-block w-[280px] sm:w-[350px] md:w-[450px] bg-[#0d1526]/80 backdrop-blur-xl p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] border border-white/5 shadow-2xl relative group/card transition-all duration-500 hover:border-[#3b82f6]/30 hover:shadow-[#3b82f6]/10"
                   >
-                    <div className="flex flex-col gap-4 mb-6">
+                    <div className="flex flex-col gap-3 md:gap-4 mb-4 md:mb-6">
                       <div>
-                        <h4 className="font-bold text-white text-lg font-poppins tracking-tight uppercase">{testimonial.name}</h4>
-                        <p className="text-sm text-[#3b82f6] font-semibold tracking-wider uppercase">{testimonial.role}</p>
+                        <h4 className="font-bold text-white text-base md:text-lg font-poppins tracking-tight uppercase">{testimonial.name}</h4>
+                        <p className="text-xs md:text-sm text-[#3b82f6] font-semibold tracking-wider uppercase">{testimonial.role}</p>
                       </div>
                     </div>
-                    <p className="text-white/80 text-lg md:text-xl italic leading-relaxed whitespace-normal font-medium">
+                    <p className="text-white/80 text-sm md:text-xl italic leading-relaxed whitespace-normal font-medium">
                       "{testimonial.content}"
                     </p>
-                    <div className="mt-8 flex gap-1">
+                    <div className="mt-6 md:mt-8 flex gap-1">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <svg key={star} className="w-5 h-5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />

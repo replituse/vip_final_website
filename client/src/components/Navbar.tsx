@@ -30,20 +30,20 @@ export function Navbar() {
 
   return (
     <nav className={navbarClasses}>
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center h-20">
-        <Link href="/" className="flex items-center gap-4 group cursor-pointer h-full">
-          <div className="relative w-20 h-20 bg-white rounded-full flex items-center justify-center p-2 shadow-xl border-2 border-white/20 group-hover:border-primary/50 transition-all duration-300">
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center h-16 md:h-20">
+        <Link href="/" className="flex items-center gap-2 md:gap-4 group cursor-pointer h-full">
+          <div className="relative w-12 h-12 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center p-1 md:p-2 shadow-xl border-2 border-white/20 group-hover:border-primary/50 transition-all duration-300">
             <img 
               src={logo} 
               alt="VIP Networks" 
-              className="w-16 h-16 object-contain" 
+              className="w-10 h-10 md:w-16 md:h-16 object-contain" 
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-sans font-semibold text-2xl tracking-widest leading-none text-white uppercase drop-shadow-md">
+            <span className="font-sans font-semibold text-lg md:text-2xl tracking-widest leading-none text-white uppercase drop-shadow-md">
               VIP NETWORKS
             </span>
-            <span className="text-[8px] md:text-[10px] text-white font-medium tracking-[0.25em] md:tracking-[0.25em] uppercase mt-1 pl-0.5 whitespace-nowrap">
+            <span className="text-[6px] md:text-[10px] text-white font-medium tracking-[0.2em] md:tracking-[0.25em] uppercase mt-0.5 md:mt-1 pl-0.5 whitespace-nowrap">
               Visionary | Innovative | Productivity
             </span>
           </div>
