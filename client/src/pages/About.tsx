@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { useEffect, useState, useRef } from "react";
 import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 import networkingVideo from "@assets/From_KlickPin_CF_Pin_su_zenziads_1769407670142.mp4";
+import workApproachVideo from "@assets/From_KlickPin_CF_Pin_on_Application_design_1769408986210.mp4";
 import networkImg from "@assets/stock_images/technology_networkin_80809026.jpg";
 import teamImg from "@assets/stock_images/professional_team_wo_80221bd7.jpg";
 import datacenterImg from "@assets/stock_images/data_center_server_r_ac3b04d4.jpg";
@@ -69,8 +70,6 @@ export default function About() {
     { title: "Healthcare Facilities", icon: HeartHandshake, image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" },
     { title: "Residential & Gated Communities", icon: UserCheck, image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" },
   ];
-
-  const workApproachVideo = "@assets/From_KlickPin_CF_Zoo°artz___Robot_picture_Robots_concept_Green_1769408366277.mp4";
 
   const approachItems = [
     {
@@ -397,17 +396,21 @@ export default function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group"
+              className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group bg-[#0d1526]"
             >
               <video 
                 autoPlay 
                 loop 
                 muted 
                 playsInline
+                controls={false}
+                preload="auto"
                 className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
-                src={workApproachVideo}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent" />
+              >
+                <source src={workApproachVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent pointer-events-none" />
             </motion.div>
 
             {/* Content Column (Right) */}
