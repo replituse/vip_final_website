@@ -7,6 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 import networkingVideo from "@assets/From_KlickPin_CF_Pin_su_zenziads_1769407670142.mp4";
 import workApproachVideo from "@assets/From_KlickPin_CF_Pin_on_Application_design_1769408986210.mp4";
+import whyDifferentVideo from "@assets/From_KlickPin_CF_Pinterest___Decoraciones_fotograficas_Decorac_1769409733359.mp4";
 import networkImg from "@assets/stock_images/technology_networkin_80809026.jpg";
 import teamImg from "@assets/stock_images/professional_team_wo_80221bd7.jpg";
 import datacenterImg from "@assets/stock_images/data_center_server_r_ac3b04d4.jpg";
@@ -218,72 +219,127 @@ export default function About() {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { 
-                  title: "Client-focused solution design", 
-                  desc: "We don't believe in one-size-fits-all. Every solution is tailored to your specific operational needs.",
-                  icon: UserCheck, 
-                  step: "01" 
-                },
-                { 
-                  title: "Enterprise-grade technologies", 
-                  desc: "We partner with global leaders to bring you the most reliable and advanced hardware and software.",
-                  icon: ShieldAlert, 
-                  step: "02" 
-                },
-                { 
-                  title: "Skilled and certified professionals", 
-                  desc: "Our team undergoes rigorous training and certification to ensure flawless implementation.",
-                  icon: Award, 
-                  step: "03" 
-                },
-                { 
-                  title: "Strong after-sales and AMC support", 
-                  desc: "Our relationship doesn't end at deployment. We provide 24/7 support and proactive maintenance.",
-                  icon: HeartHandshake, 
-                  step: "04" 
-                },
-                { 
-                  title: "Commitment to reliability and performance", 
-                  desc: "Every system we build is stress-tested to guarantee maximum uptime and peak performance.",
-                  icon: Target, 
-                  step: "05" 
-                },
-                { 
-                  title: "Future-Ready Infrastructure", 
-                  desc: "We design systems that grow with your business, ensuring your investment is protected for years.",
-                  icon: Rocket, 
-                  step: "06" 
-                }
-              ].map((point, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  whileHover={{ y: -10 }}
-                  className="group relative bg-[#0d1526]/50 backdrop-blur-sm p-8 rounded-[2.5rem] border border-white/5 shadow-2xl hover:border-[#3b82f6]/30 transition-all"
-                >
-                  <div className="absolute top-8 right-8 text-4xl font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
-                    {point.step}
-                  </div>
-                  <div className="w-14 h-14 rounded-2xl bg-[#3b82f6]/10 flex items-center justify-center mb-6 border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] group-hover:scale-110 transition-all duration-300">
-                    <point.icon className="w-7 h-7 text-[#3b82f6] group-hover:text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#3b82f6] transition-colors uppercase tracking-tight leading-tight">
-                    {point.title}
-                  </h3>
-                  <p className="text-white/50 text-sm leading-relaxed group-hover:text-white/70 transition-colors">
-                    {point.desc}
-                  </p>
-                  <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <CheckCircle2 className="w-6 h-6 text-[#3b82f6]" />
-                  </div>
-                </motion.div>
-              ))}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+              {/* Left Column - 3 Cards */}
+              <div className="flex flex-col gap-6">
+                {[
+                  { 
+                    title: "Client-focused solution design", 
+                    desc: "We don't believe in one-size-fits-all. Every solution is tailored to your specific operational needs.",
+                    icon: UserCheck, 
+                    step: "01" 
+                  },
+                  { 
+                    title: "Enterprise-grade technologies", 
+                    desc: "We partner with global leaders to bring you the most reliable and advanced hardware and software.",
+                    icon: ShieldAlert, 
+                    step: "02" 
+                  },
+                  { 
+                    title: "Skilled and certified professionals", 
+                    desc: "Our team undergoes rigorous training and certification to ensure flawless implementation.",
+                    icon: Award, 
+                    step: "03" 
+                  }
+                ].map((point, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    whileHover={{ x: -5 }}
+                    className="group relative bg-[#0d1526]/50 backdrop-blur-sm p-6 rounded-2xl border border-white/5 shadow-2xl hover:border-[#3b82f6]/30 transition-all"
+                  >
+                    <div className="absolute top-6 right-6 text-3xl font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
+                      {point.step}
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 shrink-0 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] group-hover:scale-110 transition-all duration-300">
+                        <point.icon className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#3b82f6] transition-colors uppercase tracking-tight leading-tight">
+                          {point.title}
+                        </h3>
+                        <p className="text-white/50 text-sm leading-relaxed group-hover:text-white/70 transition-colors">
+                          {point.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Center Column - Portrait Video */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group mx-auto"
+              >
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-64 md:w-72 aspect-[9/16] object-cover group-hover:scale-105 transition-transform duration-700"
+                  src={whyDifferentVideo}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050a15]/40 to-transparent pointer-events-none" />
+              </motion.div>
+
+              {/* Right Column - 3 Cards */}
+              <div className="flex flex-col gap-6">
+                {[
+                  { 
+                    title: "Strong after-sales and AMC support", 
+                    desc: "Our relationship doesn't end at deployment. We provide 24/7 support and proactive maintenance.",
+                    icon: HeartHandshake, 
+                    step: "04" 
+                  },
+                  { 
+                    title: "Commitment to reliability and performance", 
+                    desc: "Every system we build is stress-tested to guarantee maximum uptime and peak performance.",
+                    icon: Target, 
+                    step: "05" 
+                  },
+                  { 
+                    title: "Future-Ready Infrastructure", 
+                    desc: "We design systems that grow with your business, ensuring your investment is protected for years.",
+                    icon: Rocket, 
+                    step: "06" 
+                  }
+                ].map((point, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    whileHover={{ x: 5 }}
+                    className="group relative bg-[#0d1526]/50 backdrop-blur-sm p-6 rounded-2xl border border-white/5 shadow-2xl hover:border-[#3b82f6]/30 transition-all"
+                  >
+                    <div className="absolute top-6 right-6 text-3xl font-black text-white/5 group-hover:text-[#3b82f6]/10 transition-colors">
+                      {point.step}
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 shrink-0 rounded-xl bg-[#3b82f6]/10 flex items-center justify-center border border-[#3b82f6]/20 group-hover:bg-[#3b82f6] group-hover:scale-110 transition-all duration-300">
+                        <point.icon className="w-6 h-6 text-[#3b82f6] group-hover:text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#3b82f6] transition-colors uppercase tracking-tight leading-tight">
+                          {point.title}
+                        </h3>
+                        <p className="text-white/50 text-sm leading-relaxed group-hover:text-white/70 transition-colors">
+                          {point.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
