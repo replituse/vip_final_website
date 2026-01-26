@@ -120,7 +120,6 @@ export default function About() {
                   <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter leading-none">
                     Driving Innovation in <span className="text-[#3b82f6]">Infrastructure</span>
                   </h2>
-                  <div className="w-20 h-1 bg-[#3b82f6] rounded-full" />
                 </div>
 
                 <div className="space-y-6">
@@ -156,10 +155,9 @@ export default function About() {
                   loop 
                   muted 
                   playsInline
-                  className="w-full aspect-[4/5] object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                  className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700"
                   src={networkingVideo}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050a15] via-transparent to-transparent opacity-40" />
               </motion.div>
             </div>
           </div>
