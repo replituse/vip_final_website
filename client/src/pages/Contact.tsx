@@ -153,7 +153,7 @@ export default function Contact() {
                     className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 transition-all hover:scale-110 hover:border-[#3b82f6]/30 ${social.color}`}
                     aria-label={social.label}
                   >
-                    <social.icon size={18} md:size={22} />
+                    <social.icon size={18} />
                   </a>
                 ))}
               </div>
