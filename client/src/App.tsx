@@ -50,8 +50,8 @@ function Router() {
     if (location !== prevLocation) {
       setPrevLocation(location);
       
-      // Only show transition for main pages, not service details
-      if (isMainPage(location) && !isServiceDetail(location)) {
+      // Show transition for main pages and service detail pages
+      if (isMainPage(location) || isServiceDetail(location)) {
         setIsTransitioning(true);
         setPendingLocation(location);
       }

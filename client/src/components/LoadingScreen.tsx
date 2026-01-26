@@ -1,18 +1,44 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+import animatedDashboards from '@/assets/lottie/Animated_Dashboards_1768676433142_1769414854224.lottie';
+import audioVoice from '@/assets/lottie/AudioVoice_1768667815796_1769414854231.lottie';
+import cctv from '@/assets/lottie/cctv_1768664928017_1769414854232.lottie';
+import chatbot from '@/assets/lottie/chatbot_1768729907589.lottie';
+import fingerprint from '@/assets/lottie/Fingerprint_Verification_1768665968177_1769414854232.lottie';
+import internetConnectivity from '@/assets/lottie/Internet_Connectivity_1768665281102_1769414854233.lottie';
+import lockGreenTick from '@/assets/lottie/LOCK_WITH_GREEN_TICK_1768667680109_1769414854233.lottie';
+import irisScan from '@/assets/lottie/Object_detection_iris_scan_1768667569280_1769414854234.lottie';
+import tech from '@/assets/lottie/tech_1768667293533_1769414854234.lottie';
+
+const lottieAnimations = [
+  animatedDashboards,
+  audioVoice,
+  cctv,
+  chatbot,
+  fingerprint,
+  internetConnectivity,
+  lockGreenTick,
+  irisScan,
+  tech,
+];
+
+function getRandomAnimation(): string {
+  const randomIndex = Math.floor(Math.random() * lottieAnimations.length);
+  return lottieAnimations[randomIndex];
+}
 
 export function LoadingScreen() {
   const [isVisible, setIsVisible] = useState(true);
   const [shouldRender, setShouldRender] = useState(true);
-  const [dotLottie, setDotLottie] = useState<any>(null);
+  
+  const randomAnimation = useMemo(() => getRandomAnimation(), []);
 
   useEffect(() => {
-    // Show the loading screen for 5 seconds total
     const hideTimer = setTimeout(() => {
       setIsVisible(false);
     }, 5000);
 
-    // Remove from DOM after transition
     const removeTimer = setTimeout(() => {
       setShouldRender(false);
       window.dispatchEvent(new CustomEvent('loadingComplete'));
@@ -23,14 +49,6 @@ export function LoadingScreen() {
       clearTimeout(removeTimer);
     };
   }, []);
-
-  useEffect(() => {
-    if (dotLottie) {
-      // Logic to play a specific segment if the library supports it
-      // For dotLottie-react, we can use playSegments if available or seek
-      // Since it's a lottie-host URL, we'll try to control playback once loaded
-    }
-  }, [dotLottie]);
 
   if (!shouldRender) return null;
 
@@ -44,16 +62,10 @@ export function LoadingScreen() {
     >
       <div className="relative w-full max-w-[300px] aspect-square flex items-center justify-center">
         <DotLottieReact
-          src="https://lottie.host/7066785f-b22a-4043-8023-d837c2d54546/uD7uPM1dOA.lottie"
+          src={randomAnimation}
           loop
           autoplay
-          // We can't easily "cut" seconds from the start/end of a hosted .lottie file 
-          // via simple props without knowing total frames, 
-          // but we can adjust the playback rate or try to sync with the 5s timer.
-          // However, for the most direct "cut" effect requested, 
-          // we ensure it displays prominently.
           style={{ width: '100%', height: '100%' }}
-          dotLottieRefCallback={setDotLottie}
         />
       </div>
     </div>
