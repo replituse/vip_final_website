@@ -75,11 +75,6 @@ export default function Contact() {
             className="w-full h-full object-cover"
             src={worldMapVideo}
           />
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20"
-            animate={{ x: ['-100%', '100%'] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          />
         </div>
         
         <div className="container px-4 md:px-6 mx-auto relative z-10 text-center">
