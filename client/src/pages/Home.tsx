@@ -185,33 +185,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES GRID */}
+      {/* SERVICES GRID - Hidden as requested
       <section className="py-24 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/5 blur-3xl rounded-full" />
-
-        <div className="container px-4 md:px-6 mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white font-poppins tracking-tight">Our Core <span className="text-[#3b82f6]">Solutions</span></h2>
-            <p className="text-white text-lg">
-              We offer end-to-end technology services designed to enhance efficiency and ensure security across your organization.
-            </p>
-          </div>
-
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {services.map((service, idx) => (
-              <ServiceCard key={idx} {...service} index={idx} delay={idx * 0.1} showDescription={false} />
-            ))}
-          </motion.div>
-        </div>
+        ...
       </section>
+      */}
 
       {/* CTA SECTION */}
       <section className="py-12 bg-primary relative overflow-hidden">

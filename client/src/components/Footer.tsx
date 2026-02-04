@@ -86,6 +86,25 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Contact */}
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-white/80 text-[16px]">
+                <MapPin className="w-5 h-5 text-[#3b82f6] shrink-0 mt-0.5" />
+                <span>Jogeshwari East,<br />Mumbai - 400060</span>
+              </li>
+              <li className="flex items-center gap-3 text-white/80 text-[16px]">
+                <Phone className="w-5 h-5 text-[#3b82f6] shrink-0" />
+                <a href="tel:+919326144739" className="hover:text-white transition-colors">+91 9326144739</a>
+              </li>
+              <li className="flex items-center gap-3 text-white/80 text-[16px]">
+                <Mail className="w-5 h-5 text-[#3b82f6] shrink-0" />
+                <a href="mailto:vip.itinfra@gmail.com" className="hover:text-white transition-colors">vip.itinfra@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+
           {/* Newsletter / Subscribe */}
           <div className="lg:col-span-5">
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Subscribe</h4>
