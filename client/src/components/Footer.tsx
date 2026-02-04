@@ -45,7 +45,7 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white tracking-tight leading-none">VIP NETWORKS</h3>
-                <p className="text-[#3b82f6] text-[11px] tracking-[0.2em] uppercase mt-1 font-bold">Technology Meets Reliability</p>
+                <p className="text-[#3b82f6] text-[11px] tracking-[0.2em] uppercase mt-1 font-bold">VISIONARY | INNOVATIVE | PRODUCTIVITY</p>
               </div>
             </div>
             <p className="text-white/50 text-base leading-relaxed max-w-xs">
@@ -86,56 +86,14 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Our Services</h4>
-            <ul className="space-y-3">
-              {[
-                "CCTV Surveillance",
-                "Fire Detection",
-                "Access Control",
-                "Networking",
-                "Public Address",
-                "Audio Visual"
-              ].map((service) => (
-                <li key={service}>
-                  <Link href="/services">
-                    <span className="text-white/80 hover:text-[#3b82f6] transition-colors cursor-pointer text-[16px]">
-                      {service}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-white/80 text-[16px]">
-                <MapPin className="w-5 h-5 text-[#3b82f6] shrink-0 mt-0.5" />
-                <span>Jogeshwari East,<br />Mumbai - 400060</span>
-              </li>
-              <li className="flex items-center gap-3 text-white/80 text-[16px]">
-                <Phone className="w-5 h-5 text-[#3b82f6] shrink-0" />
-                <a href="tel:+919326144739" className="hover:text-white transition-colors">+91 9326144739</a>
-              </li>
-              <li className="flex items-center gap-3 text-white/80 text-[16px]">
-                <Mail className="w-5 h-5 text-[#3b82f6] shrink-0" />
-                <a href="mailto:vip.itinfra@gmail.com" className="hover:text-white transition-colors">vip.itinfra@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-
           {/* Newsletter / Subscribe */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-5">
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-[15px]">Subscribe</h4>
             <p className="text-white/50 text-[15px] mb-6 leading-relaxed">
               Stay updated with our latest technology solutions and industry insights.
             </p>
             <div className="space-y-2">
-              <div className="relative">
+              <div className="relative max-w-md">
                 <input 
                   type="email" 
                   value={email}
@@ -160,18 +118,6 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[15px] text-white/40">
           <p>© {new Date().getFullYear()} VIP Networks. All rights reserved.</p>
-          <p className="text-white/50">
-            Developed by{" "}
-            <a 
-              href="https://www.airavatatechnologies.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#3b82f6] hover:text-[#60a5fa] transition-colors font-medium"
-              data-testid="link-airavata"
-            >
-              Airavata Technologies
-            </a>
-          </p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors" data-testid="link-privacy">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors" data-testid="link-terms">Terms of Service</a>
