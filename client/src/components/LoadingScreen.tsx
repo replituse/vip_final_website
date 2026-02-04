@@ -60,7 +60,7 @@ export function LoadingScreen() {
         pointerEvents: isVisible ? 'all' : 'none'
       }}
     >
-      <div className="relative w-full max-w-[300px] aspect-square flex items-center justify-center">
+      <div className="relative w-full max-w-[120px] aspect-square flex items-center justify-center">
         <DotLottieReact
           src={randomAnimation}
           loop

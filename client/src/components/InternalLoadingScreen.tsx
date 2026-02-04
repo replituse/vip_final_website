@@ -60,7 +60,7 @@ export function InternalLoadingScreen({ onComplete }: InternalLoadingScreenProps
         height: 'min(600px, 80vh)'
       }}
     >
-      <div className="relative w-full max-w-[250px] aspect-square flex items-center justify-center">
+      <div className="relative w-full max-w-[100px] aspect-square flex items-center justify-center">
         <DotLottieReact
           src={randomAnimation}
           loop
