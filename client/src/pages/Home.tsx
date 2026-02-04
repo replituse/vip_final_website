@@ -7,7 +7,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { CheckCircle2, Shield, Network, Zap, Lock, Headset } from "lucide-react";
 import { services } from "@/lib/services-data";
 import logo from "@assets/Untitled_design_1768974869981.png";
-import videoBg from "@assets/4k_Video_Technology_Looped_Background_No_Copyright_Loop_Backgr_1768974552202.mp4";
+import techVideo from "../assets/videos/tech-background.mp4";
 import generatedSecurity from "@assets/generated_images/professional_cctv_surveillance_camera_system.png";
 import generatedAccess from "@assets/generated_images/electronic_office_key_card_reader.png";
 import generatedNetwork from "@assets/generated_images/data_center_server_rack_networking_cables.png";
@@ -63,7 +63,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src={videoBg} type="video/mp4" />
+            <source src={techVideo} type="video/mp4" />
           </video>
         </div>
 
@@ -112,6 +112,18 @@ export default function Home() {
 
       {/* INTRO / ABOUT PREVIEW */}
       <section className="py-16 md:py-24 bg-[#050a15] relative overflow-hidden">
+        {/* Background Video for Section */}
+        <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover blur-xl scale-110"
+          >
+            <source src={techVideo} type="video/mp4" />
+          </video>
+        </div>
         <div className="container px-4 md:px-6 mx-auto relative z-10">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <motion.div
@@ -208,6 +220,18 @@ export default function Home() {
 
       {/* INDUSTRIES SECTION */}
       <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+        {/* Background Video for Section */}
+        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover blur-2xl scale-125"
+          >
+            <source src={techVideo} type="video/mp4" />
+          </video>
+        </div>
         <div className="container px-4 md:px-6 mx-auto relative z-10">
           <div className="text-center max-w-5xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white font-poppins tracking-tight uppercase">Industries <span className="text-[#3b82f6]">We Serve</span></h2>
@@ -250,6 +274,18 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
       <section className="py-16 md:py-24 bg-secondary/10 relative overflow-hidden">
+        {/* Background Video for Section */}
+        <div className="absolute inset-0 z-0 opacity-25 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover blur-3xl scale-150"
+          >
+            <source src={techVideo} type="video/mp4" />
+          </video>
+        </div>
         <div className="container px-4 md:px-6 mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white font-poppins tracking-tight uppercase">Completed <span className="text-[#3b82f6]">Projects</span></h2>
